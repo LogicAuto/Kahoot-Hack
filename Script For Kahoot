@@ -1,0 +1,38 @@
+// ==UserScript==
+// @name         Kahoot cheats MOD MENU
+// @version      1.0.42
+// @namespace    https://github.com
+// @description  Built MY VANDALWARE
+// @license MIT  LogicAuto VANDALWARE
+// @author       LogicAuto
+// @match        https://kahoot.it/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=kahoot.it
+// @grant        none
+// ==/UserScript==
+var Version = '1.0.29'
+ 
+var questions = [];
+var info = {
+    numQuestions: 0,
+    questionNum: -1,
+    lastAnsweredQuestion: -1,
+    defaultIL:true,
+    ILSetQuestion:-1,
+};
+var PPT = 950;
+var Answered_PPT = 950;
+var autoAnswer = false;
+var showAnswers = false;
+var inputLag = 100;
+ 
+function FindByAttributeValue(attribute, value, element_type)    {
+  element_type = element_type || "*";
+  var All = document.getElementsByTagName(element_type);
+  for (var i = 0; i < All.length; i++)       {
+    if (All[i].getAttribute(attribute) == value) { return All[i]; }
+  }
+}
+
+// Full Kahoot mod menu code with UI and functionality
+// Creates a draggable floating menu with customizable settings
+// Auto-answer questions and show correct answers highlighted
